@@ -50,7 +50,7 @@ NDXC        = $C6               ; KERNAL: keys in the keyboard buffer
 ac_scan:
     cpx #0
     bne asc_key
-    ldx #$FF                    ; INKEY(-256): BBC B, OS 1.2
+    ldx #$C0                    ; INKEY(-256): &Cx=Commodore, &C0=Commodore 64
     ldy #0
     rts
 asc_key:

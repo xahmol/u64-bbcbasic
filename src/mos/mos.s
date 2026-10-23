@@ -1015,8 +1015,8 @@ by_ret:
     lda by_a
     rts
 
-by_osver:                       ; &00: X = 1 (as BBC MOS 1.x)
-    ldx #1
+by_osver:
+    ldx #28                     ; Return %xx0x1xxx, 28=Commodore
     bne by_ret
 by_flush:                       ; &0F, &15: empty the keyboard buffer
     lda #0                      ; (and stop a *KEY text)
